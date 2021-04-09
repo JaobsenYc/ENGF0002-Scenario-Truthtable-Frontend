@@ -33,9 +33,10 @@ export default {
   data() {
     return {
       tableColumn: [
-        { prop: 'Expression', label: 'Expression' },
-        { prop: 'Average Grade', label: 'Average Grade' },
-        { prop: 'Submission', label: 'Submission' },
+        { prop: 'id', label: 'ID' },
+        { prop: 'expression', label: 'Expression' },
+        { prop: 'average_grade', label: 'Average Grade' },
+        { prop: 'submission', label: 'Submission' },
       ],
       tableData: [],
       operate: [],

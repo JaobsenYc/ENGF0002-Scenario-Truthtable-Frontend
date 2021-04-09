@@ -253,7 +253,8 @@ export default {
         element.groups.forEach(item => {
           groups.push(item.name)
         })
-        element.groupNames = groups.join(',')
+        element.groupNames = groups.pop()
+        element.classNames = groups.pop()
         list.push(element)
       })
       console.log(list)
@@ -266,8 +267,8 @@ export default {
     this.tableColumn = [
       { prop: 'id', label: 'ID' },
       { prop: 'username', label: 'Name' },
-      { prop: 'groupNames', label: 'Group' },
-      { prop: 'groupNames', label: 'Group' },
+      { prop: 'classNames', label: 'Group' },
+      { prop: 'groupNames', label: 'Class' },
     ] // 设置表头信息
     this.operate = [
       { name: 'Edit', func: 'handleEdit', type: 'primary' },

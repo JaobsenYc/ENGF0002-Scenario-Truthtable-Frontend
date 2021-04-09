@@ -1,29 +1,19 @@
 <template>
   <div class="container">
     <div class="title">
-      <span>修改图书</span> <span class="back" @click="back"> <i class="iconfont icon-fanhui"></i> 返回 </span>
+      <span>Edit</span> <span class="back" @click="back"> <i class="iconfont icon-fanhui"></i> Return </span>
     </div>
     <el-divider></el-divider>
     <div class="wrap">
       <el-row>
         <el-col :lg="16" :md="20" :sm="24" :xs="24">
           <el-form :model="form" status-icon ref="form" label-width="100px" v-loading="loading" @submit.native.prevent>
-            <el-form-item label="书名" prop="title">
-              <el-input size="medium" v-model="form.title" placeholder="请填写书名"></el-input>
-            </el-form-item>
-            <el-form-item label="作者" prop="author">
-              <el-input size="medium" v-model="form.author" placeholder="请填写作者"></el-input>
-            </el-form-item>
-            <el-form-item label="封面" prop="image">
-              <el-input size="medium" v-model="form.image" placeholder="请填写封面地址"></el-input>
-            </el-form-item>
-            <el-form-item label="简介" prop="summary">
-              <el-input size="medium" type="textarea" :rows="4" placeholder="请输入简介" v-model="form.summary">
-              </el-input>
+            <el-form-item label="Expression" prop="title">
+              <el-input size="medium" v-model="form.expression" placeholder="Enter an expression"></el-input>
             </el-form-item>
             <el-form-item class="submit">
-              <el-button type="primary" @click="submitForm('form')">保 存</el-button>
-              <el-button @click="resetForm('form')">重 置</el-button>
+              <el-button type="primary" @click="submitForm('form')">Save</el-button>
+              <el-button @click="resetForm('form')">Reset</el-button>
             </el-form-item>
           </el-form>
         </el-col>

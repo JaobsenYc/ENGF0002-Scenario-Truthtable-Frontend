@@ -6,7 +6,7 @@ const CustomRouter = {
   icon: 'iconfont icon-zidingyi',
   filePath: 'view/custom/',
   order: null,
-  inNav: true,
+  inNav: false,
   children: [
     {
       title: 'upload 图像上传',
