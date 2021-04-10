@@ -21,7 +21,7 @@
               </li>
               <li>
                 <span class="shadow-box"> <i class="team-shadow"></i> </span> <span class="team-role">Back-end</span>
-                <span class="team-name">Siqi Chen</span>
+                <span class="team-name">Siqi Zhu</span>
               </li>
               <li>
                 <span class="shadow-box"> <i class="team-shadow"></i> </span> <span class="team-role">Algorithm</span>

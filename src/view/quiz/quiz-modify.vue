@@ -49,7 +49,7 @@ export default {
     async submitForm() {
       const res = await quiz.editQuiz(this.editQuizID, this.form)
       if (res.code < window.MAX_SUCCESS_CODE) {
-        this.$message.success(`${res.message}`)
+        this.$message.success('Successfully edit')
         this.$emit('editClose')
       }
     },

@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-    <div class="team-name hidden-sm-and-down"><img src="@/assets/image/login/team-name.png" alt="logo" /></div>
+    <!--    <div class="team-name hidden-sm-and-down"><img src="@/assets/image/login/team-name.png" alt="logo" /></div>-->
     <div class="form-box" v-loading="loading" element-loading-background="rgba(0, 0, 0, 0)">
       <div class="title"><h1 title="Lin">Lin CMS</h1></div>
       <form class="login-form" autocomplete="off" @submit.prevent="throttleLogin()">
@@ -12,7 +12,7 @@
           <span class="icon secret-icon"></span>
           <input type="password" v-model="form.password" autocomplete="off" placeholder="请填写用户登录密码" />
         </div>
-        <button class="submit-btn" type="submit">登录</button>
+        <button class="submit-btn" type="submit">Login</button>
       </form>
     </div>
   </div>
@@ -46,7 +46,7 @@ export default {
         await this.getInformation()
         this.loading = false
         this.$router.push(AppConfig.defaultRoute)
-        this.$message.success('登录成功')
+        this.$message.success('Successfully login')
       } catch (e) {
         this.loading = false
         console.log(e)

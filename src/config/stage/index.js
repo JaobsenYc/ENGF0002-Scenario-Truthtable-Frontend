@@ -6,7 +6,7 @@ import Utils from '@/lin/util/util'
 // eslint-disable-next-line import/no-mutable-exports
 let homeRouter = [
   {
-    title: 'Engf0001 Team 1',
+    title: 'ENGF0002 Team 1',
     type: 'view',
     name: Symbol('about'),
     route: '/about',

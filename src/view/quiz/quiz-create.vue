@@ -56,7 +56,7 @@ export default {
         const res = await quiz.createQuiz(this.form)
         this.loading = false
         if (res.code < window.MAX_SUCCESS_CODE) {
-          this.$message.success(`${res.message}`)
+          this.$message.success('Successfully create')
           this.resetForm(formName)
         }
       } catch (error) {

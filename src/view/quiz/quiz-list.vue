@@ -53,7 +53,7 @@ export default {
         name: 'Delete',
         func: 'handleDelete',
         type: 'danger',
-        permission: '删除图书',
+        permission: 'delete the quiz',
       },
     ]
     this.loading = false
@@ -75,9 +75,9 @@ export default {
       this.editQuizID = val.row.id
     },
     handleDelete(val) {
-      this.$confirm('此操作将永久删除该图书, 是否继续?', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
+      this.$confirm('Do you want to continue deleting the quiz?', '提示', {
+        confirmButtonText: 'Continue',
+        cancelButtonText: 'Cancel',
         type: 'warning',
       }).then(async () => {
         const res = await quiz.deleteQuiz(val.row.id)
@@ -85,7 +85,7 @@ export default {
           this.getQuizs()
           this.$message({
             type: 'success',
-            message: `${res.message}`,
+            message: 'Successfully delete',
           })
         }
       })
