@@ -10,6 +10,7 @@
         :operate="operate"
         @handleEdit="handleEdit"
         @handleDelete="handleDelete"
+        @openQuiz="openQuiz"
         @row-click="rowClick"
         v-loading="loading"
       ></lin-table>
@@ -48,6 +49,11 @@ export default {
     this.loading = true
     await this.getQuizs()
     this.operate = [
+      {
+        name: 'View',
+        func: 'openQuiz',
+        type: 'warning',
+      },
       { name: 'Edit', func: 'handleEdit', type: 'primary' },
       {
         name: 'Delete',
@@ -73,6 +79,10 @@ export default {
       console.log('val', val)
       this.showEdit = true
       this.editQuizID = val.row.id
+    },
+    openQuiz(val) {
+      window.open(`http://localhost:3000/#/quiz/${val.row.id}`, '_blank')
+      console.log('val', val.row.id)
     },
     handleDelete(val) {
       this.$confirm('Do you want to continue deleting the quiz?', '提示', {

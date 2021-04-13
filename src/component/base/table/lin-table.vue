@@ -168,6 +168,10 @@ export default {
       const { methods } = this.$options
       methods[func](_this, index, row)
     },
+    openQuiz(_this, index, row) {
+      // window.open('http://localhost:3000/#/quiz/${val.row.id}', '_blank')
+      _this.$emit('openQuiz', { index, row })
+    },
     // 行内编辑
     handleEdit(_this, index, row) {
       _this.$emit('handleEdit', { index, row })
