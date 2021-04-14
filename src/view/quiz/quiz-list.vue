@@ -81,7 +81,7 @@ export default {
       this.editQuizID = val.row.id
     },
     openQuiz(val) {
-      window.open(`http://localhost:3000/#/quiz/${val.row.id}`, '_blank')
+      window.open(`https://trutable.ucl.jaobsen.com/#/quiz/${val.row.id}`, '_blank')
       console.log('val', val.row.id)
     },
     handleDelete(val) {

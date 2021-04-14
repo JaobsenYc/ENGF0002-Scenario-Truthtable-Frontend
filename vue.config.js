@@ -7,7 +7,10 @@ function resolve(dir) {
 module.exports = {
   lintOnSave: true,
   productionSourceMap: false,
-  // assetsDir: 'static',
+  assetsDir: 'static',
+  publicPath: process.env.BASE_URL, // 或使用process.env.VUE_APP_CONTEXT_PATH
+  // assetsSubDirectory: '../static',
+
   chainWebpack: config => {
     config.resolve.alias
       .set('@', resolve('src'))

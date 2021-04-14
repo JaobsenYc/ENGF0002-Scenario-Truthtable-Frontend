@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="title">分组列表信息</div>
+    <div class="title">Group lists</div>
     <lin-table
       :tableColumn="tableColumn"
       :tableData="tableData"
@@ -185,11 +185,11 @@ export default {
   },
   async created() {
     await this.getAllGroups()
-    this.tableColumn = [{ prop: 'name', label: '名称' }, { prop: 'info', label: '信息' }] // 设置表头信息
+    this.tableColumn = [{ prop: 'name', label: 'Name' }, { prop: 'info', label: 'Info' }] // 设置表头信息
     this.operate = [
-      { name: '信息', func: 'handleEdit', type: 'primary' },
-      { name: '权限', func: 'goToGroupEditPage', type: 'info' },
-      { name: '删除', func: 'handleDelete', type: 'danger' },
+      { name: 'Info', func: 'handleEdit', type: 'primary' },
+      { name: 'Permission', func: 'goToGroupEditPage', type: 'info' },
+      { name: 'Del', func: 'handleDelete', type: 'danger' },
     ]
     // 监听添加分组是否成功
     this.eventBus.$on('addGroup', this.addGroup)
